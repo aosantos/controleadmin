@@ -1,4 +1,5 @@
 <?php
+
 class Contas extends CI_Controller {
 
     public function __construct() {
@@ -11,12 +12,30 @@ class Contas extends CI_Controller {
         $this->load->helper('html');
     }
 
-    public function add_contas() {
+    public function listacontas($pular = null) {
         $this->load->view('topo');
         $this->load->model('contasx');
+        $this->load->library('pagination');
 
-        $data ['contas'] = $this->contasx->lista_contas();
-        $this->load->view('add_contas', $data);
+        $config['base_url'] = base_url("contas/listacontas");
+
+        $config['total_rows'] = $this->contasx->contar();
+        $produtos = 12;
+        $config['per_page'] = $produtos;
+
+        $this->pagination->initialize($config);
+        $data['links_paginacao'] = $this->pagination->create_links();
+        $data ['contas'] = $this->contasx->lista_contas($pular, $produtos);
+
+        $this->load->view('listacontas', $data);
+    }
+    public function add_contas(){
+        $this->load->view('topo');
+        $this->load->model('contasx');
+        $this->load->library('pagination');
+        //$data ['contas'] = $this->contasx->lista_contas();
+
+        $this->load->view('add_contas');
     }
 
     public function cadastrar_contas() {
@@ -32,7 +51,7 @@ class Contas extends CI_Controller {
             );
 
             $this->db->insert('contas_categorias', $data);
-            redirect('add_contas');
+            redirect('listacontas');
             exit;
         }
     }
@@ -65,15 +84,16 @@ class Contas extends CI_Controller {
         if ($this->form_validation->run() == FALSE) {
             $this->editar_nome_contas($id);
         } else {
-        $id = $this->input->post('cod');
-        $nome = $this->input->post('nome_contas');
-        $data = ['nome_contas' => $nome];
-        $this->db->where('cod', $id);
-        $this->db->update('contas_categorias', $data);
-        
-        redirect("add_contas");
+            $id = $this->input->post('cod');
+            $nome = $this->input->post('nome_contas');
+            $data = ['nome_contas' => $nome];
+            $this->db->where('cod', $id);
+            $this->db->update('contas_categorias', $data);
+
+            redirect("add_contas");
+        }
     }
-    }
+
     public function contasremover($id) {
         $this->load->library('session');
         if ($_POST) {

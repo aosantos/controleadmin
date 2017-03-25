@@ -1,7 +1,6 @@
 <?php
 class Loginx extends CI_Model {
 
-
     function validate() 
     {
 

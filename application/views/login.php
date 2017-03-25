@@ -64,7 +64,7 @@
         <div class="col-md-10 ">
             <div class="login-panel panel panel-danger">
                 <div class="panel-heading">
-                    <h3 class="panel-title"> <a href="<?php echo base_url()?>senha"> Esqueceu a senha?
+                    <h3 class="panel-title"> <a href="<?php echo base_url()?>senha"style="text-decoration:none;color:black;"> Esqueceu a senha?
         Clique aqui
                
                </a> </h3>

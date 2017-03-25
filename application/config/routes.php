@@ -25,6 +25,7 @@ $route['editarusuarios']            = "usuarios/editarusuarios";
 $route['alterar_cadastro/(:any)']   = "usuarios/alterar_cadastro/$1";
 $route['tipo_gastos']               = "dinheiro/tipo_gastos"; 
 $route['contagastosportipo/(:any)'] = "dinheiro/contagastosportipo/$1";
+$route['listacontas']               = "contas/listacontas"; 
 $route['add_contas']                = "contas/add_contas"; 
 $route['cadastrar_contas']          = "contas/cadastrar_contas"; 
 $route['dividas']                   = "dividas/index"; 

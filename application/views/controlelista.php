@@ -284,6 +284,9 @@ for ($i = 0; $i < $max; $i++) {
                         <a href="<?php echo base_url() ?>dinheiro"><i class="fa fa-fw fa-dashboard"></i> Controle Financeiro</a>
                     </li>
                     <li>
+                        <a href="<?php echo base_url() ?>add_contas"><i class="fa fa-fw fa-plus-circle"></i> Cadastrar Contas</a>
+                    </li>
+                    <li>
                          <a href="<?php echo base_url() ?>relatorio"><i class="fa fa-fw fa-bar-chart-o"></i> Relatório</a>
                     </li>
                     <li>
@@ -392,9 +395,9 @@ for ($i = 0; $i < $max; $i++) {
                                     </div>
                                 </div>
                             </div>
-                             <a href="<?php echo base_url() ?>add_contas" >
+                             <a href="<?php echo base_url() ?>listacontas" >
                                 <div class="panel-footer">
-                                    <span class="pull-left">Cadastrar tipo de Contas</span>
+                                    <span class="pull-left">Listar tipo de Contas</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>

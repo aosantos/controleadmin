@@ -175,6 +175,9 @@
                         <a href="<?php echo base_url() ?>dinheiro"><i class="fa fa-fw fa-dashboard"></i> Controle Financeiro</a>
                     </li>
                     <li>
+                        <a href="<?php echo base_url() ?>add_contas"><i class="fa fa-fw fa-plus-circle"></i> Cadastrar Contas</a>
+                    </li>
+                    <li>
                         <a href="<?php echo base_url() ?>relatorio"><i class="fa fa-fw fa-bar-chart-o"></i> Relatório</a>
                     </li>
                     <li>
