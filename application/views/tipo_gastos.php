@@ -2,7 +2,6 @@
       <script src="<?php echo base_url() ?>assets/js/bootstrap.js"></script>
       <script src="<?php echo base_url() ?>assets/js/npm.js"></script>
       <script src="<?php echo base_url('assets/bower_components/jquery/dist/jquery.min.js') ?>"></script>
-  
 <script>
     function confirmaSaida(event) {
         event.preventDefault ? event.preventDefault() : event.returnValue = false;

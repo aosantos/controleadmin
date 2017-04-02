@@ -55,9 +55,7 @@
                         <select name="contas" class="form-control"  name='contas' id='contas' value='<?php echo set_value('contas'); ?>'  
                                 <?= mb_strtoupper($nome_contas); ?>
                             autofocus  placeholder=' Tipo de Gasto ' maxlength='255'/>
-                    </select>
-                        
-                        
+                        </select>
                       <!-- Código que traz o select html como segunda opção
                       <div class="form-group">
                     <label class="control-label col-sm-2" for="contas">Tipo de Gasto:</label>
@@ -74,7 +72,7 @@
             </fieldset>
         </form>
     </div>
- <script src="js/jquery.min.js"></script>
- <script src="js/bootstrap.min.js"></script>
+ <script src="<?php echo base_url() ?>assets/js/jquery.min.js"></script>
+ <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
 </body>
 </html>

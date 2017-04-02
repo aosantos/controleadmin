@@ -1,5 +1,4 @@
 <script>
-  
     function confirmaSaida(event) {
         event.preventDefault ? event.preventDefault() : event.returnValue = false;
         var teste = confirm("Tem certeza de que deseja sair?");
@@ -9,11 +8,8 @@
 
     }
 </script> 
-
 <div id="main" class="container-fluid">
-     
   <h3 class="page-header">Adicionar Dividas</h3>
-  
  <div align='center'>
         <ul class="breadcrumb">
            <li>Adicionar Dividas</li>
@@ -55,7 +51,7 @@
             </fieldset>
         </form>
     </div>
- <script src="js/jquery.min.js"></script>
- <script src="js/bootstrap.min.js"></script>
+ <script src="<?php echo base_url() ?>assets/js/jquery.min.js"></script>
+ <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
 </body>
 </html>

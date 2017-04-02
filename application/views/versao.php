@@ -56,8 +56,6 @@
         <p>Autor:Anderson Oliveira</p>
         &COPY; &nbsp; <?=  date('Y') ?>
 </strong>
-
-        </td>
         </tr>
 
     </table>

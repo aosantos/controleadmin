@@ -1,7 +1,5 @@
 <?php
-
 class Dinheiro extends CI_Controller {
-
     public function __construct() {
         ini_set('display_errors', 1);
         ini_set('log_errors', 1);
@@ -20,16 +18,12 @@ class Dinheiro extends CI_Controller {
         $this->load->model('contasx');
         $this->load->model('dividasx');
         $this->load->model('usuariosx');
-
         $this->load->library('table');
         $this->load->library('pagination');
-
         $config['base_url']     = base_url("dinheiro/index");
-
         $config['total_rows']   = $this->dinheirox->contar();
         $produtos = 12;
         $config['per_page']     = $produtos;
-
         $this->pagination->initialize($config);
         $data['links_paginacao']            = $this->pagination->create_links();
         $data['dinheiro']                   = $this->dinheirox->list_dinheiro($pular, $produtos);
@@ -67,10 +61,8 @@ class Dinheiro extends CI_Controller {
         $this->form_validation->set_rules('entrada', 'Valor Mensal', 'required');
         $this->form_validation->set_rules('novasaida', 'Nova Saida', 'required');
         $this->form_validation->set_rules('contas', 'Tipo de Gasto', 'required');
-
         $codigo = $this->session->userdata('cod');
         $data['dinheiro'] = $this->dinheirox->list_dinheiro();
-
         if ($this->form_validation->run() === false) {
             $this->add_dinheiro();
         } else {
@@ -80,7 +72,6 @@ class Dinheiro extends CI_Controller {
             $saida      = $this->input->post('novasaida');
             $ano        = $this->input->post('ano');
             $contas     = $this->input->post('contas');
-
             $saldo      = $entrada - $saida;
 
             if ($saldo <= 0) {
@@ -120,16 +111,13 @@ class Dinheiro extends CI_Controller {
         $this->load->library('session');
         $this->load->model('dinheirox');
         $this->load->model('contasx');
-
         $datas        = $this->dinheirox->edita($id);
-
         $nome_contas  = $this->contasx->nomecontas();
         $option = "<option value=''></option>";
         foreach ($nome_contas->result() as $linha) {
             $option .= "<option value='$linha->nome_contas'>$linha->nome_contas</option>";
         }
         $data['nome_contas'] = $option;
-
         $this->load->view('topo', $datas);
         $this->load->view('editardinheiro', $data);
     }
@@ -272,7 +260,6 @@ class Dinheiro extends CI_Controller {
     }
 
     public function contagastosportipo($contas) {
-
         $this->load->library('session');
         $this->load->model('dinheirox');
         $data['contas'] = $this->dinheirox->contagastos($contas);
@@ -280,7 +267,6 @@ class Dinheiro extends CI_Controller {
         $this->load->view('topo');
         $this->load->view('contagastos', $data);
     }
-
 }
 
 ?>

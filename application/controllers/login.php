@@ -2,7 +2,6 @@
 if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
-
 class Login extends CI_Controller {
 
     function __construct() {                
@@ -15,30 +14,25 @@ class Login extends CI_Controller {
 
     function index() 
     {
-
 	$this->load->view('login');
-
     }
-     private function dinheiro($pular = null) {
+    
+    private function dinheiro($pular = null) {
         $this->load->library('session');
         $this->load->model('dinheirox');
         $this->load->model('contasx');
         $this->load->model('dividasx');
         $this->load->model('usuariosx');
-        
         $this->load->library('table');	
         $this->load->library('pagination');
       	
-        $config['base_url'] = base_url("dinheiro/index");
-		
-        $config['total_rows'] = $this->dinheirox->contar();
+        $config['base_url']     = base_url("dinheiro/index");		
+        $config['total_rows']   = $this->dinheirox->contar();
         $produtos = 12;
-        $config['per_page'] = $produtos;	
-            
+        $config['per_page']     = $produtos;	
         $this->pagination->initialize($config);		
-        $data['links_paginacao'] = $this->pagination->create_links();	
-        $data['dinheiro']   = $this->dinheirox->list_dinheiro($pular,$produtos);
-   
+        $data['links_paginacao']                = $this->pagination->create_links();	
+        $data['dinheiro']                       = $this->dinheirox->list_dinheiro($pular,$produtos);
         $data['soma']                           = $this->dinheirox->soma_saldo();
         $data['gastos']                         = $this->dinheirox->listatipogastos();
         $data['contagastos']                    = $this->dinheirox->contacadastrodegasto();
@@ -53,12 +47,9 @@ class Login extends CI_Controller {
     {
     	$this->load->model("loginx");// chama o modelo login
         $this->load->model("perfilx");// chama o modelo perfilx
-   
         $login = $this->input->post("login");// pega via post o login 
         $senha = $this->input->post("senha"); // pega via post a senha
-        
         $usuario = $this->loginx->buscaPorLoginSenha($login,$senha); // acessa a função buscaPorEmailSenha do modelo
-        
         if($usuario){
             $this->session->set_userdata($usuario);
             
@@ -73,20 +64,16 @@ class Login extends CI_Controller {
         }else{
               $errologin = $this->session->set_flashdata('errologin', "Login ou Senha Inválidos!");
               redirect('/',base_url($errologin));
-                             
-    
               }
     }
 
     public function logout() {
-
         $sess_array = array(
         'login' => ''
         );
         $this->session->unset_userdata('logged_in', $sess_array);
         session_destroy();
         redirect(base_url());
-        
         }
         }
 ?>

@@ -4,7 +4,6 @@ header("Content-type: application/force-download");
 header("Content-Disposition: attachment; filename=relatorio_diario.xls");
 header("Pragma: no-cache");
 header('Content-Type: text/html; charset=iso-8859-1');
-
 ?>
 <table width="100%" cellspacing="1" cellpadding="4" border="0" class="BordaTabela" > 
     <tbody>

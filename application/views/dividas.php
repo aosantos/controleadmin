@@ -62,18 +62,12 @@
     });
 
 </script>
-
-    
-    <div align="center">
-        
-       
-            <a href="<?php echo base_url() ?>add_dividas" class="btn btn-success pequeno" > Cadastrar <i class="glyphicon glyphicon-plus icon-white"></i>
-</a>
-
+    <div align="center">    
+    <a href="<?php echo base_url() ?>add_dividas" class="btn btn-success pequeno" > Cadastrar <i class="glyphicon glyphicon-plus icon-white"></i>
+    </a>
    
     <?php
-$color          = "beige";
-    
+        $color = "beige";
     ?>                                
                                          
 <tr bgcolor='<?=$color?>'>
@@ -121,7 +115,8 @@ $color          = "beige";
         <td style="width:150px;"><i><b>&nbsp;<?= $observacao ?></b></i></td>
         <td width='105px'>
 
-            <a href="<?php echo base_url() ?>editardivida/<?= strtolower($dividas[$i]['cod']); ?>"class="btn btn-danger btn-icon btn-circle">Atualizar&nbsp;<span class="glyphicon glyphicon-pencil"></span> </a>
+            <a href="<?php echo base_url() ?>editardivida/<?= strtolower($dividas[$i]['cod']); ?>"class="btn btn-danger btn-icon btn-circle">Somar&nbsp;<span class=""></span> </a>
+            <a href="<?php echo base_url() ?>editardividas/<?= strtolower($dividas[$i]['cod']); ?>"class="btn btn-danger btn-icon btn-circle">Subtrair&nbsp;<span class=""></span> </a>
             <a class="btn btn-danger btn-icon btn-circle" id="remover_<?= ($i + 1) ?>" onclick="remover(this.id);">Excluir&nbsp;<i class="glyphicon glyphicon-trash"></i></a>
             
     </tr>

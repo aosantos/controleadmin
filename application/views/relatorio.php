@@ -9,7 +9,6 @@
     }
 </script> 
     <br>
-
     <div align="center">
         </ul>
         
@@ -96,7 +95,5 @@ for ($i = 0; $i < $max; $i++) {
 
     </div>
     </tbody>
-
-
     </body>
     </html>

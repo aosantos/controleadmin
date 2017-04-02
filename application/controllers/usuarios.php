@@ -4,15 +4,15 @@ class Usuarios extends CI_Controller {
         ini_set('display_errors', 1);
         ini_set('log_errors', 1);
         error_reporting(E_ALL);
-
         parent::__construct();
         $this->load->model('loginx', 'login');
         $this->load->helper('html');    
     }
-
+    
     public function index() {
         $this->load->view('add_usuarios');
     }
+    
     public function  cadastrar_usuarios(){
      $this->load->library('form_validation');
      $this->form_validation->set_rules('nome', 'Nome', 'required|min_length[4]|max_length[255]');
@@ -20,8 +20,7 @@ class Usuarios extends CI_Controller {
      $this->form_validation->set_rules('senha', 'Senha', 'required|min_length[6]', array('required' => 'Você deve preencher a %s.'));
      $this->form_validation->set_rules('confsenha', 'Confirmação de Senha', 'required|matches[senha]');
      $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
-     //$this->form_validation->set_rules('userfile', 'Foto', 'required');
-  
+     
      if ($this->form_validation->run() == FALSE) {
            $erros = array('mensagens' => validation_errors());
            $this->load->view('add_usuarios', $erros);
@@ -50,13 +49,13 @@ class Usuarios extends CI_Controller {
                                'imagem'           =>$imagem
                             );
           $this->db->insert('administrador', $data);
-          
           redirect('/',base_url($sucesso));
           exit;
     }
      }
              
   }
+  
   function upload_foto(){
             $config['upload_path'] = './images/perfil';
             $config['allowed_types'] = 'gif|jpg|png';
@@ -74,12 +73,11 @@ class Usuarios extends CI_Controller {
                 return $data['upload_data']['file_name'];
             }
         }
-        public function senha(){
-        $this->load->view('recuperasenha');
-        
+    public function senha(){
+    $this->load->view('recuperasenha');      
     }
     
-     public function recuperar_login(){
+    public function recuperar_login(){
         $this->load->library('form_validation');        
         $this->form_validation->set_rules('email', 'E-mail', 'required|valid_email');
         if ($this->form_validation->run() == FALSE){
@@ -117,7 +115,7 @@ class Usuarios extends CI_Controller {
             }
         }
     }
-
+    
     public function alterar_cadastro($cod){
         $this->load->library('session');
         $this->load->model('usuariosx');
@@ -127,9 +125,7 @@ class Usuarios extends CI_Controller {
         $this->load->view('altera_cadastro',$data);
     }
     
-   
-    public function  editarusuarios(){
-            
+    public function  editarusuarios(){       
             $cod = $this->session->userdata('cod');
             $this->load->library('form_validation');
             $this->form_validation->set_rules('nome', 'Nome', 'required|min_length[4]|max_length[255]');
@@ -145,7 +141,7 @@ class Usuarios extends CI_Controller {
                 $login      = $this->input->post('login');
                 $senha      = $this->input->post('senha');
                 $confsenha  = $this->input->post('confsenha');
-                
+        
                 if($_FILES['userfile']['error']==0){
                     $imagem = $this->upload_foto();
                 }else{
@@ -175,25 +171,22 @@ class Usuarios extends CI_Controller {
             }
         }
         
-         public  function usuarioremover($id) {
+    public  function usuarioremover($id) {
         $this->load->library('session');
         if ($_POST) {
-
             $usuarios = $_POST['id'];
-
             $this->load->model('usuariosx');
             $this->usuariosx->remover($usuarios);
             
         }
     }
+    
     public function ver(){
         $this->load->model('usuariosx');
         $data['usuarios']   = $this->usuariosx->usuarios();
         $this->load->view('topo');
-        
         $this->load->view('usuariover',$data);
         
-    }
-        
+    }    
 }
 ?>

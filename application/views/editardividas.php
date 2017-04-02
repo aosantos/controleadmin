@@ -25,7 +25,7 @@
       <?php }  ?>
      <form class="form-horizontal" <?php
     $attributes = array('class' => 'form-signin', 'role' => 'form');
-    echo form_open(base_url().'salvardivida',$attributes);
+    echo form_open(base_url().'salvardividas',$attributes);
     ?> 
          <input type='hidden' name='saldo'  value=''/>
          <input type='hidden' name='cod' value='<?=$cod ?>'/>    
@@ -42,10 +42,10 @@
                             autofocus  placeholder=' Preencha a Entrada  ' maxlength='255'/>
                    
                 <div class="form-group">
-                    <label class="control-label col-sm-2" for="entrada">Aumento da Divida:</label>
+                    <label class="control-label col-sm-2" for="entrada">Diminuir Divida:</label>
                     <div class="col-sm-8">
                         <input  type="text" class="form-control"  name='novaentrada' id='novaentrada' value='<?php echo set_value('novaentrada'); ?>'  
-                            autofocus  placeholder=' Preencha a  Nova Divida  ' maxlength='255'/>
+                            autofocus  placeholder='Diminuir sua Divida  ' maxlength='255'/>
                     </div>
                 </div>
                       <div class="form-group">

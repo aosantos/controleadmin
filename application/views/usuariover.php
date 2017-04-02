@@ -2,7 +2,6 @@
       <script src="<?php echo base_url() ?>assets/js/bootstrap.js"></script>
       <script src="<?php echo base_url() ?>assets/js/npm.js"></script>
       <script src="<?php echo base_url('assets/bower_components/jquery/dist/jquery.min.js') ?>"></script>
-  
 <script>
 
     $(document).ready(function () {
@@ -75,8 +74,6 @@ $color          = "beige";
         $login           = $usuarios[$i]['login'];
         $nome            = $usuarios[$i]['nome'];
         $email           = $usuarios[$i]['email'];
-        
-       
         ?> 
     <tr bgcolor='<?= $color ?>' class="<?php ?>" id="odd_gradeX_<?= ($i + 1) ?>" data-id="<?= $usuarios[$i]['cod'] ?>">
         <td style="width:185px;"><i><b><?= $cod ?></b></i></td>
@@ -85,14 +82,10 @@ $color          = "beige";
         <td style="width:150px;"><i><b>&nbsp;<?= $email ?></b></i></td>
         
         <td width='105px'>
-
             
             <a class="btn btn-danger btn-icon btn-circle" id="remover_<?= ($i + 1) ?>" onclick="remover(this.id);">Excluir&nbsp;<i class="glyphicon glyphicon-trash"></i></a>
-            
     </tr>
     <?php
 }
 ?>      
-
-</table>
     

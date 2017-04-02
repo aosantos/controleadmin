@@ -2,7 +2,6 @@
       <script src="<?php echo base_url() ?>assets/js/bootstrap.js"></script>
       <script src="<?php echo base_url() ?>assets/js/npm.js"></script>
       <script src="<?php echo base_url('assets/bower_components/jquery/dist/jquery.min.js') ?>"></script>
-  
 <script>
 
     $(document).ready(function () {
@@ -73,9 +72,8 @@
             <tr>";
  }
      ?>
-                    
+                
      <?php
-
 for ($i = 0; $i < $max; $i++) {
 
     if ($color == 'white') {
@@ -86,9 +84,7 @@ for ($i = 0; $i < $max; $i++) {
     $id     = $contas[$i]['cod'];
     $cod    = $contas[$i]['cod'];
     $nome   = $contas[$i]['nome_contas'];
- 
     ?> 
- 
                 <tr bgcolor='<?= $color ?>' class="<?php ?>" id="odd_gradeX_<?= ($i + 1) ?>" data-id="<?= $contas[$i]['cod'] ?>">
                     <td style="width:1000px;"><i><div align="center"><b><?= $nome ?></b></div></i></td>
                     <td width='105px'>
@@ -101,7 +97,6 @@ for ($i = 0; $i < $max; $i++) {
 }
 ?>      
 
-    </table>
      <div class="pager" >
         <li><?= $links_paginacao ?></li>
     </div>

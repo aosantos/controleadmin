@@ -267,6 +267,60 @@ if ( ! function_exists('img2'))
 }
 
 
+
+if ( ! function_exists('img3'))
+{
+	/**
+	 * Image
+	 *
+	 * Generates an <img /> element
+	 *
+	 * @param	mixed
+	 * @param	bool
+	 * @param	mixed
+	 * @return	string
+	 */
+	function img3($src = '', $index_page = FALSE, $attributes = '')
+	{
+		if ( ! is_array($src) )
+		{
+			$src = array('src' => $src);
+		}
+
+		// If there is no alt attribute defined, set it to an empty string
+		if ( ! isset($src['alt']))
+		{
+			$src['alt'] = '';
+                        $src['width'] = '400px';
+                        $src['heigth'] = '400px';
+		}
+
+		$img = '<img';
+
+		foreach ($src as $k => $v)
+		{
+			if ($k === 'src' && ! preg_match('#^([a-z]+:)?//#i', $v))
+			{
+				if ($index_page === TRUE)
+				{
+					$img .= ' src="'.get_instance()->config->site_url($v).'"';
+				}
+				else
+				{
+					$img .= ' src="'.get_instance()->config->slash_item('base_url').$v.'"';
+				}
+			}
+			else
+			{
+				$img .= ' '.$k.'="'.$v.'"';
+			}
+		}
+
+		return $img._stringify_attributes($attributes).' />';
+	}
+}
+
+
 // ------------------------------------------------------------------------
 
 if ( ! function_exists('doctype'))

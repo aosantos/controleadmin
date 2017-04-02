@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">
@@ -28,7 +27,6 @@
 <link href="<?php echo base_url() ?>assets/css/plugins/morris.css" rel="stylesheet" media="screen">
 <?php echo link_tag('assets/font-awesome/css/font-awesome.min.css');?>
       
-
 </head>
 <script>
     function confirmaSaida(event) {
@@ -112,10 +110,7 @@
 </div>
        </div>
             
-        
-               
-  
-<script src="<?php echo base_url() ?>assets/js/jquery.js"></script>
+        <script src="<?php echo base_url() ?>assets/js/jquery.js"></script>
         <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
         <script src="<?php echo base_url() ?>assets/js/plugins/morris/raphael.min.js"></script>
         <script src="<?php echo base_url() ?>assets/js/plugins/morris/morris.min.js"></script>
