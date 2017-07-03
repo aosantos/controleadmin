@@ -179,11 +179,15 @@
                         <a href="<?php echo base_url() ?>relatorio"><i class="fa fa-fw fa-bar-chart-o"></i> Relatório</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url() ?>dividas"><i class="fa fa-fw fa-table"></i> Controle de Dividas</a>
+                         <a href="<?php echo base_url() ?>tipo_gastos"><i class="fa fa-fw fa-table"></i> Tipos de Gastos</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url() ?>excel"><i class="fa fa-fw fa-edit"></i> Relatório em Excel</a>
                     </li>
+                    <li>
+                        <a href="<?php echo base_url() ?>pdf"><i class="fa fa-fw fa-edit"></i> Relatório em PDF</a>
+                    </li>
+                    
                     <li>
                         <a href="<?php echo base_url() ?>versao"><i class="fa fa-fw fa-desktop"></i> Sobre o Sistema</a>
                     </li>

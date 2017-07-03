@@ -290,7 +290,7 @@ for ($i = 0; $i < $max; $i++) {
                          <a href="<?php echo base_url() ?>relatorio"><i class="fa fa-fw fa-bar-chart-o"></i> Relatório</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url() ?>dividas"><i class="fa fa-fw fa-table"></i> Controle de Dividas</a>
+                        <a href="<?php echo base_url() ?>tipo_gastos"><i class="fa fa-fw fa-table"></i> Tipos de Gastos</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url() ?>excel"><i class="fa fa-fw fa-edit"></i> Relatório em Excel</a>
@@ -454,9 +454,9 @@ for ($i = 0; $i < $max; $i++) {
                                     </div>
                                 </div>
                             </div>
-                            <a href="<?php echo base_url() ?>tipo_gastos ">
+                            <a href="<?php echo base_url() ?>dividas ">
                                 <div class="panel-footer">
-                                    <span class="pull-left">Tipo de Gastos</span>
+                                    <span class="pull-left">Dividas</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>

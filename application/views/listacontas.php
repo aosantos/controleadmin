@@ -46,23 +46,27 @@
         }
 
     }
-</script> 
-<br> 
+</script>
+<br>
 <div id="main" class="container-fluid">
      <br><br>
   <h3 class="page-header">Listar Contas</h3>
-  
+
  <div align='center'>
         <ul class="breadcrumb ">
            <li>Listar Contas</li>
-        </ul>
-     
+        </ul>   
+     <?php/*
+      foreach ($contas as $value) {
+        echo $value['nome_contas'];
+      }
+    */ ?>
     </div>
-                        
+
                     <?php
                     $color= "beige";
                     if ($max = count($contas)){
- 
+
      echo "<table class='table table-bordered   breadcrumb'>
         <thead >
         <th width=\"1000px\"> Nome da Conta</th>
@@ -72,7 +76,7 @@
             <tr>";
  }
      ?>
-                
+
      <?php
 for ($i = 0; $i < $max; $i++) {
 
@@ -84,7 +88,7 @@ for ($i = 0; $i < $max; $i++) {
     $id     = $contas[$i]['cod'];
     $cod    = $contas[$i]['cod'];
     $nome   = $contas[$i]['nome_contas'];
-    ?> 
+    ?>
                 <tr bgcolor='<?= $color ?>' class="<?php ?>" id="odd_gradeX_<?= ($i + 1) ?>" data-id="<?= $contas[$i]['cod'] ?>">
                     <td style="width:1000px;"><i><div align="center"><b><?= $nome ?></b></div></i></td>
                     <td width='105px'>
@@ -95,7 +99,7 @@ for ($i = 0; $i < $max; $i++) {
                 </tr>
     <?php
 }
-?>      
+?>
 
      <div class="pager" >
         <li><?= $links_paginacao ?></li>

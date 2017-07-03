@@ -15,6 +15,7 @@ $route['relatorio']                 = "dinheiro/relatorio";
 $route['editar/(:any)']             = "dinheiro/edita/$1";
 $route['soma_saldo']                = "dinheiro/soma_saldo";
 $route['excel']                     = "dinheiro/exporta_excel";
+$route['pdf']                       = "dinheiro/pdf";
 $route['add_dinheiro']              = "dinheiro/add_dinheiro";
 $route['salvaralteracao']           = "dinheiro/salvaralteracao"; 
 $route['add_usuarios']              = "usuarios/index"; 
