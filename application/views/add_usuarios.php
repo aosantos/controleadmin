@@ -61,7 +61,7 @@
                             <h3>Contato do Desenvolvedor</h3>
                             <p><i class="glyphicon glyphicon-map-marker"></i>São Paulo SP, Brasil </p>
                             <p><i class="glyphicon glyphicon-earphone"></i>(11) 94161-7357 </p>
-                            <p><i class="glyphicon glyphicon-envelope"></i>andersonoli@hotmail.com.br</p>
+                            <p><i class="glyphicon glyphicon-envelope"></i>andoliversant@hotmail.com</p>
                         
                         <label class="control-label col-md-4 col-sm-4"></label>
                 </div>
