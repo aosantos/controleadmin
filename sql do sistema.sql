@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 29-Out-2017 às 00:44
+-- Generation Time: 11-Fev-2018 às 00:51
 -- Versão do servidor: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -146,7 +146,7 @@ ALTER TABLE `administrador`
 -- AUTO_INCREMENT for table `contas`
 --
 ALTER TABLE `contas`
-  MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `contas_categorias`
 --
@@ -161,7 +161,7 @@ ALTER TABLE `controle_dividas`
 -- AUTO_INCREMENT for table `dinheiro`
 --
 ALTER TABLE `dinheiro`
-  MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Constraints for dumped tables
 --
