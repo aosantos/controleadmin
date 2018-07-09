@@ -184,16 +184,19 @@
                     <li>
                         <a href="<?php echo base_url() ?>excel"><i class="fa fa-fw fa-edit"></i> Relatório em Excel</a>
                     </li>
-                    <li>
-                        <a href="<?php echo base_url() ?>pdf"><i class="fa fa-fw fa-edit"></i> Relatório em PDF</a>
-                    </li>
                     
                     <li>
                         <a href="<?php echo base_url() ?>versao"><i class="fa fa-fw fa-desktop"></i> Sobre o Sistema</a>
                     </li>
                     <li>
+                        <a href="<?php echo base_url() ?>alterar_cadastro/<?= $this->session->userdata('cod'); ?>"><i class="fa fa-fw fa-pencil"></i> Editar Perfil</a>
+                    </li>
+                    <li>
                         <a href="<?php echo base_url() ?>usuariover"><i class="fa fa-fw fa-remove"></i> Apagar Perfil</a>
                     </li>
+                    
+                    
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

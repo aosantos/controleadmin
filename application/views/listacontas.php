@@ -55,7 +55,7 @@
  <div align='center'>
         <ul class="breadcrumb ">
            <li>Listar Contas</li>
-        </ul>   
+        </ul>
      <?php/*
       foreach ($contas as $value) {
         echo $value['nome_contas'];

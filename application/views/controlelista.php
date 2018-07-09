@@ -298,6 +298,9 @@ for ($i = 0; $i < $max; $i++) {
                     <li>
                         <a href="<?php echo base_url() ?>versao"><i class="fa fa-fw fa-desktop"></i> Sobre o Sistema</a>
                     </li>
+                    <li>
+                        <a href="<?php echo base_url() ?>alterar_cadastro/<?= $this->session->userdata('cod'); ?>"><i class="fa fa-fw fa-pencil"></i> Editar Perfil</a>
+                    </li>
                   <li>
                         <a href="<?php echo base_url() ?>usuariover"><i class="fa fa-fw fa-remove"></i> Apagar Perfil</a>
                     </li>
